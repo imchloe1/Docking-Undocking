@@ -33,7 +33,7 @@ function draw() {
   text("Down Arrow = Gymming ",30,70);
   text("Left Arrow = Eating ",30,90);
   text("Right Arrow = Bathing ",30,110);
-  text("M key = Moving ",30,130);
+  text("Space = Moving ",30,130);
 
   if(keyDown("DOWN_ARROW")){
     astronaut.addAnimation("gymming", gym);
@@ -42,6 +42,15 @@ function draw() {
     astronaut.velocityX = 0;
     astronaut.velocityY = 0;
   }
+
+  if(keyDown("UP_ARROW")){
+    astronaut.addAnimation("brushing", brush);
+    astronaut.changeAnimation("brushing");
+    astronaut.y = 350;
+    astronaut.velocityX = 0;
+    astronaut.velocityY = 0;
+  }
+
 
   if(keyDown("LEFT_ARROW")){
     astronaut.addAnimation("eating", eat);
@@ -59,7 +68,7 @@ function draw() {
     astronaut.velocityY = 0;
   }
 
-  if(keyDown("M_KEY")){
+  if(keyDown("SPACE")){
     astronaut.addAnimation("moving", move);
     astronaut.changeAnimation("moving");
     astronaut.y = 350;
