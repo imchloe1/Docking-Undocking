@@ -1,10 +1,11 @@
-var bg, sleep, brush, gym, eat, drink, move;
+var bg, sleep, brush, gym, eat, drink, bath, move;
 var astronaut;
 
 function preload() {
   bg = loadImage("iss.png");
   sleep = loadAnimation("sleep.png");
   brush = loadAnimation("brush.png");
+  bath = loadAnimation("bath1.png","bath2.png");
   gym = loadAnimation("gym1.png","gym2.png");
   eat = loadAnimation("eat1.png","eat2.png");
   drink = loadAnimation("drink1.png","drink2.png");
@@ -66,7 +67,8 @@ function draw() {
     astronaut.velocityY = 3;
   }
   
-edges= createEdgeSprites();
+
+  edges= createEdgeSprites();
   astronaut.bounceOff(edges);
   
 }
