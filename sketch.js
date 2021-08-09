@@ -66,9 +66,8 @@ function draw() {
     astronaut.velocityY = 3;
   }
   
-
-  createEdgeSprites();
-  astronaut.bounceOff(Edge);
+edges= createEdgeSprites();
+  astronaut.bounceOff(edges);
   
 }
 
